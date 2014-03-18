@@ -1,0 +1,121 @@
+<html>
+<head></head>
+<body>
+
+<wicket:extend>
+	<h1> <span wicket:id="title"></span></h1>
+	 <table>
+    	<tr>
+    	<td><span wicket:id="backToEmployer" ></span></td>
+	  </tr>
+	  </table>
+	 <form id="contactform" wicket:id ="editForm">
+	  <span wicket:id="feedback"></span>
+	  
+    <table>
+    	<tr>
+    		<td width="150">
+    			Firstname 
+    		</td>
+    		<td>
+    			<input wicket:id="firstname" size="25" type="text" placeholder="Firstname"/>
+    		</td>
+    	</tr>
+    	<tr>
+    		<td>
+    			Lastname
+    		</td>
+    		<td>
+    		 <input wicket:id="lastname" size="25" type="text" placeholder="Lastname"/>
+    		</td>
+    	</tr>
+    	<tr>
+    		<td>
+    			Companyname
+    		</td>
+    		<td>
+    		 <input wicket:id="company" size="25" type="text"/>
+    		</td>
+    	</tr>
+    	<tr>
+    		<td>
+    			Homepage
+       		</td>
+    		<td>
+    		 <input wicket:id="homepage" size="25" type="text"/>
+    		</td>
+    	</tr>
+    	<tr>
+    		<td>
+    			Phone
+    		</td>
+    		<td>
+    		 <input wicket:id="contact" size="25" type="text"/>
+    		</td>
+    	</tr>
+    	
+    	
+    	<tr>
+    		<td>
+    			Street
+    		</td>
+    		<td>
+    		 <input wicket:id="street" size="25" type="text"/>
+    		</td>
+    	</tr>
+    	<tr>
+    		<td>
+    			Zip Code
+    		</td>
+    		<td>
+    		 <input wicket:id="zip" size="8" type="text"/>
+    		</td>
+    	</tr>
+    	<tr>
+    		<td>
+    			City
+    		</td>
+    		<td>
+    		 <input wicket:id="city" size="25" type="text"/>
+    		</td>
+    	</tr>
+    	
+    	<tr>
+    		<td>
+    			Email 
+    		</td>
+    		<td>
+    		<input wicket:id="email" size="25" type="text" placeholder="email" disabled="disabled"/>
+    		<wicket:link>
+    		(<a href="/hrrss/ui/employer/edit/email/EditEmail.html">Change Email</a>)
+    		</wicket:link>
+    		</td>
+    	</tr>
+    	<tr>
+    		<td>
+    			Password
+    		</td>
+    		<td>
+    		<input wicket:id="password" size="25" type="password" placeholder="********" disabled="disabled"/>
+    		<wicket:link>
+    		(<a href="/hrrss/ui/employer/edit/password/EditPassword.html">Change Password</a>)
+    		</wicket:link>
+    		</td>
+    	</tr>
+    	<tr>
+    		<td>
+    			
+    		</td>
+    		<td>
+    		<input wicket:id="submit" type="submit" class="button_example" value="Save"/>
+    		</td>
+    	</tr>
+    	
+    	
+    	                     
+    </table>
+</form>
+   
+</wicket:extend>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!-- Questionnaire from applicants views -->
+<!-- implements the UI for the applicant for answering the employers questions-->
+<!-- includes different fragment for different types of questions,-->
+<!-- the navigator for web page (according parameter from the java class -->
+<!-- represent different numbers of items on the web page -->
+<html>
+<head></head>
+<body>
+	<wicket:extend>
+		<h2>Survey</h2>
+		<h4 wicket:id="surveyname"></h4> 
+		<form wicket:id="form">
+			<input wicket:id="inbox" type="submit" class="button_example" value="Return" />
+			<span wicket:id="feedback"></span>
+			<br></br>
+			<div wicket:id="navigator"></div>
+
+			<div wicket:id="questions">
+			<label>Please click on button "save" to save the answer!!!</label>
+				<div id="big">
+					<label wicket:id="number">number</label> <label wicket:id="text">text</label>
+				</div>
+				<!-- fragments -->
+				<!-- What the user see depends on the fragment -->
+
+				<span wicket:id="placeholderForFragmente">[content will go
+					here]</span>
+				
+				<!-- open question -->
+				<wicket:fragment wicket:id="variant_open">
+					<div wicket:id="infoDialog">[info]</div>
+					<textarea wicket:id="answer" rows="10" cols="100" maxlength="500"></textarea>
+					<br>
+					<input wicket:id="submit" class="button_example" type="submit" value="Save" />
+					</br>
+				</wicket:fragment>
+
+				<!-- closed question -->
+				<wicket:fragment wicket:id="variant_closed">
+					<div wicket:id="infoDialog">[info]</div>
+					<span wicket:id="answers">
+
+						<div wicket:id="subanswers">
+
+							<input wicket:id="choice" type="checkbox" name="choice"
+								value="choice" />
+							<wicket:container wicket:id="answer" />
+
+						</div>
+
+					</span>
+					<input wicket:id="submit" class="button_example" type="submit" value="Save" />
+				</wicket:fragment>
+				<!-- attach file -->
+				<wicket:fragment wicket:id="variant_attach">
+					<label>Select file :</label>
+					<div wicket:id="infoDialog">[info]</div>
+					<div wicket:id="infoDialogDelete">[delete]</div>
+					<label>Max. file size: 50 MB.</label>
+					<input wicket:id="fileUpload" size="40" type="file" />
+					<input wicket:id="submit" class="button_example" type="submit" value="Save" />
+					<input wicket:id="del" class="button_example" type="submit" value="Delete" />
+					<span wicket:id="file"></span>
+					<br></br>
+					<div id="big" wicket:id="filename">text</div>
+					<td><a wicket:id="link"><span wicket:id="linktext"></span></a></td>
+				</wicket:fragment>
+				
+				<wicket:fragment wicket:id="variant_file">
+					<div id=big>Please put the ID of your youtube video</div>
+					
+					<div wicket:id="infoDialog">[info]</div>
+					<input wicket:id="answer" size="20" maxlength="20" type="text"/>
+					<input wicket:id="submit" class="button_example" type="submit" value="Save" />
+					<br></br>
+					<label wicket:id="content">content</label>
+					
+<!-- 					<iframe id="widget" type="text/html" width="640" height="390" src="https://www.youtube.com/upload_embed" frameborder="0"/> -->
+					
+<!-- 					<form action="post_url?nexturl=http://example.com" method ="post" enctype="multipart/form-data"> -->
+<!-- 						<input type="file" name="file"/> -->
+<!-- 						<input type="hidden" name="token" value="token_value"/> -->
+<!-- 						<input type="submit" value="go" /> -->
+<!-- 					</form> -->
+				</wicket:fragment>
+				
+				<!-- fragments end-->
+
+			</div>
+
+		</form>
+
+	</wicket:extend>
+</body>
+</html>

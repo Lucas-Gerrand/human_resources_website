@@ -1,0 +1,37 @@
+<!-- HTML for the Add survey page -->
+<!-- the page includes a list of surveys. Each survey has name, date and details -->
+<!-- click on the link "add" adds the apllicant to a survey -->
+
+<html>
+<head></head>
+<body>
+	<wicket:extend>
+		<h2>Surveys</h2>
+		<span wicket:id="feedback"></span>
+		<div wicket:id="navigator"></div>
+		<div wicket:id="surveys">
+			<h4 wicket:id="name">name</h4>
+			<div id="big" wicket:id="date">text</div>
+			<div id="big" wicket:id="text">text</div>
+			<span wicket:id="placeholderForFragmente">[content will go
+					here]</span>
+			<!-- fragment add -->
+			<wicket:fragment wicket:id="variant_add">
+					<br>
+					<td><a wicket:id="submit" href="#">send survey</a></td>
+					</br>				
+			
+			</wicket:fragment>
+			
+			<wicket:fragment wicket:id="variant_has">
+			
+			<label><div id="new" wicket:id="add">You have already send the survey</div></label> 
+			</wicket:fragment>
+			
+			<div></div>
+
+		</div>
+		<div></div>
+	</wicket:extend>
+</body>
+</html>

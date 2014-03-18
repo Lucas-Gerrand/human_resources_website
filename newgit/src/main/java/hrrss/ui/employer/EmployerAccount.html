@@ -1,0 +1,77 @@
+<html>
+<head></head>
+<body>
+<wicket:extend>
+    <h1>Account</h1>
+    <table>
+    	<tr>
+    		<td valign="top">
+    			<table width="230">
+    				<tr>
+    					<td>
+    				<img wicket:id="profile_pic"/>
+    					</td>
+    				</tr>
+    				<tr>
+    					<td>
+    					<span wicket:id="applicantLink"></span>
+    					</td>
+    				</tr>
+    			</table>
+    		</td>
+    		<td valign="top">
+    			<table widht="600">
+    				<tr>
+    					<td colspan="2"><b>Informations</b> 
+    					<span wicket:id="editAll"></span>
+    					</td>
+    				</tr>
+    				<tr width="500">
+    					<td colspan="2"><hr></td>
+    				</tr>
+    				<tr>
+    					<td width="150">Company Name</td>
+    					<td width="350"><span wicket:id="company"></span></td>
+    				</tr>
+    				<tr>
+    					<td>Homepage</td>
+    					<td> <span wicket:id="homepage"></span></td>
+    				</tr>
+    				<tr>
+    					<td>Phone</td>
+    					<td><span wicket:id="contact"></span></td>
+    				</tr>
+    				<tr>
+    					<td valign="top">Address</td>
+    					<td valign="top"> <span wicket:id="address"></span></td>
+    				</tr>
+    				<tr width="500" height="30">
+    					<td colspan="2"></td>
+    				</tr>
+    				<tr>
+    					<td colspan="2"><b>New Jobs</b>
+    					<span wicket:id="editJob"></span>
+    					
+    					</td>
+    				</tr>
+    				<tr width="500">
+    					<td colspan="2"><hr></td>
+    				</tr>
+    				<tr>
+    					<td colspan="2">
+    						<table>
+    							<span wicket:id="showJobs"></span>
+    							
+    						</table>
+    					</td>
+    				</tr>
+    				<tr width="500" height="30">
+    					<td colspan="2"></td>
+    				</tr>
+    			</table>
+    		</td>
+    	</tr>
+    </table>
+</wicket:extend>
+</body>
+</html>

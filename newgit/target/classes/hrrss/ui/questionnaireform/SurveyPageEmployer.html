@@ -1,0 +1,23 @@
+<!-- The UI for the Surveys list -->
+<!-- the navigator for web page (according parameter from the java class -->
+<!-- represent different numbers of items on the web page -->
+<!-- contains the link for adding a new survey -->
+<html>
+<head></head>
+<body>
+	<wicket:extend>
+		<h2>Surveys</h2>
+		<td><a wicket:id="addsurvey" href="#">ADD NEW SURVEY</a></td>
+
+		<div wicket:id="navigator"></div>
+		<div wicket:id="surveys">
+			<h4 wicket:id="name">name</h4>
+			<div id="big" wicket:id="date">text</div>
+			<div id="big" wicket:id="text">text</div>
+			<td><a wicket:id="add" href="#">details</a></td>
+			<td><a wicket:id="delete" href="#">delete</a></td>
+			<div></div>
+		</div>
+	</wicket:extend>
+</body>
+</html>

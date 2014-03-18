@@ -1,0 +1,68 @@
+<html>
+<head></head>
+<body>
+
+<wicket:extend>
+	<h1>Edit Jobs</h1>
+	<table>
+    	<tr>
+    	<td><span wicket:id="backToEmployer" ></span></td>
+	  </tr>
+	  </table>
+	 <table>
+	 	<span wicket:id="jobsContent"></span>
+	 	<tr>
+	 		<td height="30"></td>
+	 	</tr>
+	 	
+	 	<tr>
+	 		<td height="30"></td>
+	 	</tr>
+     </table>
+     
+	<h1>Add Job</h1>
+	 <form  id="contactform" wicket:id ="editForm">
+	  <span wicket:id="feedback"></span>
+    <table>
+    	<tr>
+    		<td width="150">
+    			Title 
+    		</td>
+    		<td>
+    			<input wicket:id="title" size="25" type="text" placeholder="Title"/>
+    		</td>
+    	</tr>
+    	<tr>
+    		<td>
+    			Description
+    		</td>
+    		<td>
+    		<textarea wicket:id="text" rows="10" cols="70"></textarea>
+    		</td>
+    	</tr>
+    	<tr>
+    		<td>
+    			Qualification
+    		</td>
+    		<td>
+    		<input wicket:id="qualification" size="25" type="text" placeholder="qualification"/>
+    		</td>
+    	</tr>
+    	<tr>
+    		<td>
+    			
+    		</td>
+    		<td>
+    		<input wicket:id="submit" type="submit" class="button_example" value="Save"/>
+    		</td>
+    	</tr>
+    	
+    	
+    	                     
+    </table>
+</form>
+   
+
+</wicket:extend>
+</body>
+</html>

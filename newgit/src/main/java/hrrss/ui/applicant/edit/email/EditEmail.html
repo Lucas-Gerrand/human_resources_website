@@ -1,0 +1,48 @@
+<html>
+<head></head>
+<body>
+
+<wicket:extend>
+	<h1> <span wicket:id="title"></span></h1>
+	 <form id="contactform" wicket:id ="editMailForm">
+	  <span wicket:id="feedback"></span>
+    <table>
+    	<tr>
+    		<td colspan="2">
+    		If you change your email you will be logged off and a new activation key will be send to your new email.<br>
+    		So please use a valid email.<br><br>
+   			</td>
+    	</tr>
+    	<tr>
+    		<td width="150">
+    			Email
+    		</td>
+    		<td>
+    		 <input wicket:id="email" size="25" type="text" placeholder="email"/>
+    		</td>
+    	</tr>
+    	<tr>
+    		<td>
+    			ReEmail 
+    		</td>
+    		<td>
+    		<input wicket:id="reemail" size="25" type="text" placeholder="Reemail"/>
+    		</td>
+    	</tr>
+    	<tr>
+    		<td>
+    			
+    		</td>
+    		<td>
+    		<input wicket:id="submit" type="submit" class="button_example" value="Change email"/>
+    		</td>
+    	</tr>
+    	
+    	
+    	                     
+    </table>
+</form>
+   
+</wicket:extend>
+</body>
+</html>

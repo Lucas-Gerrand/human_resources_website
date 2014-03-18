@@ -1,0 +1,40 @@
+<html>
+<head></head>
+<body>
+	<wicket:extend>
+		<h1>
+			<span wicket:id="title"></span>
+		</h1>
+		<form wicket:id="newQForm">
+
+			<span wicket:id="feedback"></span>
+			<tr>
+				<td>Write the new question</td>
+
+				<td><input wicket:id="quastion" size="100" maxlength="150" type="text"
+					placeholder="write your quastion" /></td>
+			</tr>
+			<br></br>
+			<td><input wicket:id="addAnswer" type="submit" class="button_example"
+				value="Add Answers (min 2 Answers)" /></td>
+			<td><input wicket:id="submit" type="submit" class="button_example" value="Add question" /></td>
+			<td><input wicket:id="cancel" type="submit" class="button_example" value="Cancel" /></td>
+		</form>
+
+		<div wicket:id="navigator"></div>
+		<div wicket:id="subanswers">
+			<div id="big" wicket:id="showAns">text</div>
+
+			<td><a wicket:id="del" href="#">delete answer</a></td>
+			<div></div>
+
+		</div>
+		<table>
+			<tr>
+				<td height="40"></td>
+			</tr>
+
+		</table>
+	</wicket:extend>
+</body>
+</html>

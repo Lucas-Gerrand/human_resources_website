@@ -1,0 +1,58 @@
+<html>
+<head></head>
+<body>
+
+<wicket:extend>
+	<h1> <span wicket:id="title"></span></h1>
+	 <form  id="contactform" wicket:id ="editForm">
+	  <span wicket:id="feedback"></span>
+    <table>
+    	<tr>
+    		<td width="150">
+    			Send To:
+    		</td>
+    		<td>
+    			<input wicket:id="sendTo" size="25" type="text" placeholder=""/>
+    		</td>
+    	</tr>
+    	<tr>
+    		<td width="150">
+    			Subject
+    		</td>
+    		<td>
+    			<input wicket:id="iTitle" size="25" type="text" placeholder="Subject"/>
+    		</td>
+    	</tr>
+    	<tr>
+    		<td>
+    			
+    			Body of message <p>max length 400 characters </p> 
+    			
+    		</td>
+    		<td>
+    		<textarea maxlength = "400" wicket:id="text" rows="10" cols="40" type="text" placeholder="Message body"/>
+    		</td>
+    	</tr>
+    	
+    	<tr>
+    		<td>
+    			
+    		</td>
+    		<td>
+    		<input wicket:id="submit" type="submit" class="button_example" value="Save"/>
+    		</td>
+    	</tr>
+    	
+    	
+    	                     
+    </table>
+</form>
+   
+<table>
+<tr><td height="40"></td></tr>
+<span wicket:id="showJobs"></span>
+    							
+</table>
+</wicket:extend>
+</body>
+</html>

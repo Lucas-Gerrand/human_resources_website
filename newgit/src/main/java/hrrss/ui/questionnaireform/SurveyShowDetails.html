@@ -1,0 +1,75 @@
+<!-- Questionnaire from employers views -->
+<!-- implements the UI for the employer to see the questions-->
+<!-- includes different fragment for different types of questions,-->
+<!-- the navigator for web page (according parameter from the java class -->
+<!-- represent different numbers of items on the web page -->
+<html>
+<head></head>
+<body>
+	<wicket:extend>
+		<h2>Survey</h2>
+		<h4 wicket:id="surveyname"></h4>
+		
+		<form wicket:id="form">
+			
+			<div wicket:id="navigator"></div>
+			<div wicket:id="questions">
+
+			<div id = "big">
+				<label wicket:id="number">number</label>
+				<label wicket:id="text">text</label>
+			</div>
+			
+	<!-- fragments -->
+		<!-- What the user see depends on the fragment -->
+	
+			<span wicket:id="placeholderForFragmente">[content will go
+					here]</span>
+
+	<!-- open question -->
+				<wicket:fragment wicket:id="variant_open">
+					<div wicket:id="infoDialog">[info]</div>
+					<textarea readonly="readonly" disabled="disabled" wicket:id="answer" rows="0" cols="100"></textarea>
+					<input  wicket:id="submit" type="hidden" value="Save" />  
+				</wicket:fragment>
+	
+	<!-- closed question -->
+				<wicket:fragment wicket:id="variant_closed">
+					<div wicket:id="infoDialog">[info]</div>
+  					<span wicket:id="answers"> 
+ 					<div wicket:id="subanswers">
+ 						<input wicket:id="choice" type="checkbox" name="choice" value="" disabled="disabled" checked="checked" />
+ 						<wicket:container wicket:id="answer"/>
+ 						
+ 					</div>
+ 				</span>
+ 				<input wicket:id="submit" type="hidden" value="Save" />
+				</wicket:fragment>
+	<!-- attach file -->				
+			<wicket:fragment wicket:id="variant_attach">
+ 					<div wicket:id="infoDialog">[info]</div>
+					<div wicket:id="infoDialogDelete">[delete]</div>
+					<input wicket:id="fileUpload"  size="40" type="file"/>
+					<input wicket:id="submit" type="hidden" value="Save" />
+					<input wicket:id="del" type="hidden" value="Delete" />
+					<span wicket:id="file" type="hidden"></span>
+					<div id="big" wicket:id="filename" type="hidden">text</div>
+					<td><a wicket:id="link" ><span wicket:id="linktext"></span></a></td>
+				</wicket:fragment>
+				<!-- fragments end-->	
+				<!-- fragment video -->				
+				<wicket:fragment wicket:id="variant_file">
+					<label wicket:id="content">content</label>
+					<div wicket:id="infoDialog">[info]</div>
+					<input readonly="readonly" disabled="disabled" wicket:id="answer"/>
+					<input  wicket:id="submit" type="hidden" value="Save" />	
+				</wicket:fragment>
+							
+			</div>
+		
+			
+		</form>	
+		
+	</wicket:extend>
+</body>
+</html>

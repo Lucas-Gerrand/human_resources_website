@@ -1,0 +1,49 @@
+<html>
+<head></head>
+<body>
+<wicket:extend>
+    <h1>Edit your pictures</h1>
+     
+    <table>
+    	<tr>
+    		<td valign="top">
+    			<table width="230">
+    				<tr>
+    					<td>
+    				<img wicket:id="profile_pic"/>
+    					</td>
+    				</tr>
+    				<tr>
+    					<td>
+    					<span wicket:id="applicantLink"></span>
+    					</td>
+    				</tr>
+    			</table>
+    		</td>
+    		<td valign="top">
+    			<table width="600">
+    				<tr>
+    					<td colspan="1"><b></b> 
+    					<span wicket:id="editAll"></span>
+    					</td>
+    				</tr>
+    				<form  id="contactform" wicket:id ="editForm">
+    				<span wicket:id="feedback"></span>
+    				<tr>
+    				<label>Select file :</label> 
+					<input wicket:id="fileUpload" size="40"  type="file" class="button_example"/>
+    				
+    		<td>
+    		<input wicket:id="submit" type="submit" class="button_example" value="Save"/>
+    		</td>
+    	</tr>
+    				
+    				</form>
+    			</table>
+    		</td>
+    	</tr>
+    </table>
+    
+</wicket:extend>
+</body>
+</html>

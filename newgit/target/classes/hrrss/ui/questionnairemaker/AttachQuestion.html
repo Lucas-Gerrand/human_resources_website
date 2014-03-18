@@ -1,0 +1,25 @@
+<html>
+<head></head>
+<body>
+	<wicket:extend>
+
+		<h1>
+			<span wicket:id="title"></span>
+		</h1>
+		<form wicket:id="attForm">
+			
+				<td>Write the new question (max. 70 characters)</td>
+				<span wicket:id="feedback"></span>
+			
+				<td><input wicket:id="quastion" size="70" maxlength="70" type="text"
+					placeholder="write your quastion" /></td>
+				<p>
+					<td><input wicket:id="submit" type="submit" class="button_example" value="Save" /></td>
+					<td><input wicket:id="cancel" type="submit" class="button_example" value="Cancel" /></td>
+				</p>
+		</form>
+
+
+	</wicket:extend>
+</body>
+</html>

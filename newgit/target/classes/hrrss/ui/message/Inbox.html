@@ -1,0 +1,74 @@
+<html>
+<head></head>
+<body>
+
+	<wicket:extend>
+		<h1>
+			<span wicket:id="title"></span>
+		</h1>
+		<form id="contactform" wicket:id="editForm">
+			<span wicket:id="feedback"></span>
+			<table>
+
+			</table>
+
+		</form>
+		<h2> Inbox</h2>
+		<table>
+			<tr>
+				<td width="30"></td>
+				<td width="100"><h3>Delete</h3></td>
+				<td width="100"><h3>Reply</h3></td>
+				<td width="150"><h3>Date</h3></td>
+				<td width="175"><h3>From</h3></td>
+				<td width="175"><h3>Subject</h3></td>
+				<td width="600"><h3>Message</h3></td>
+			</tr>
+		</table>
+		
+		<div class = "pagination" wicket:id="Inboxnavigator"></div>
+		<div wicket:id="inboxMessagesNew">
+		<table>
+			<tr>
+			<td width="30"><div id="new" wicket:id="newMail"></div></td>
+			<td width="100" wicket:id="MessageDelete">Message Delete</td>
+			<td width="100" wicket:id="MessageReply">Message Reply</td>
+			
+			<td width="150" wicket:id="MessageDate">Message Date</td>
+			<td width="175" wicket:id="MessageFrom">Message From</td>
+			<td width="175" wicket:id="MessageSubject">Message body</td>
+			
+			<td width="600" wicket:id="MessageDetail">Message Detail</td>
+			</tr>
+		</table>
+		</div>
+		<h2> Sent</h2>
+		<table>
+			<tr>
+				
+				<td width="100"><h3>Delete</h3></td>
+				<td width="100"><h3>Reply</h3></td>
+				<td width="150"><h3>Date</h3></td>
+				<td width="175"><h3>To</h3></td>
+				<td width="175"><h3>Subject</h3></td>
+				<td width="600"><h3>Message</h3></td>
+			</tr>
+		</table>
+		<div class = "pagination" wicket:id="Sentnavigator"></div>
+		<div wicket:id="sentMessagesNew">
+		<table>
+			<tr>
+			<td width="100" wicket:id="MessageDelete">Message Delete</td>
+			<td width="100" wicket:id="MessageReply">Message Reply</td>
+			<td width="150" wicket:id="MessageDate">Message Date</td>
+			<td width="175" wicket:id="MessageTo">Message To</td>
+			<td width="175" wicket:id="MessageSubject">Message body</td>
+			<td width="600" wicket:id="MessageBody">Message body</td>
+			</tr>
+		</table>
+		</div>
+		
+		
+	</wicket:extend>
+</body>
+</html>

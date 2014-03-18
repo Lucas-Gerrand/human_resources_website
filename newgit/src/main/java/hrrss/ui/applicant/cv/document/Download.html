@@ -1,0 +1,67 @@
+<html>
+
+<head></head>
+<body>
+<wicket:extend>
+    <h1>Download</h1>
+    <table>
+    	<tr>
+    		<td valign="top">
+    			<table width="230">
+    				<tr>
+    					<td>
+    				<img wicket:id="profile_pic"/>
+    					</td>
+    				</tr>
+    				<tr>
+    					<td>
+    					<wicket:link>
+    					<a href="/hrrss/ui/applicant/pictures/Picture.html">Pictures</a> <br> 
+    					<a href="/hrrss/ui/applicant/videos/Video.html">Videos</a> <br>
+    					<span wicket:id="links"></span><br>
+    					<span wicket:id="linkPicture"></span><br>
+    					</wicket:link>  
+    					</td>
+    				</tr>
+    			</table>
+    		</td>
+    		<td valign="top">
+    			<table widht="600">
+    				<tr>
+    					<td colspan="2"><b>Allgemeine Informationen</b> 
+    					<span wicket:id="editAll"></span>
+    					</td>
+    				</tr>
+    				<tr width="500">
+    					<td colspan="2"><hr></td>
+    				</tr>
+    				<tr>
+    					<td width="150">Firstname</td>
+    					<td width="450"><span wicket:id="firstname"></span></td>
+    				</tr>
+    				<tr>
+    					<td>Lastname</td>
+    					<td> <span wicket:id="lastname"></span></td>
+    				</tr>
+    				<tr>
+    					<td>Email</td>
+    					<td> <span wicket:id="email"></span></td>
+    				</tr>
+    				<tr>
+    					<td>Birthday</td>
+    					<td><span wicket:id="birthday"></span></td>
+    				</tr>
+    				
+    				<tr>
+    					<td>Extract text here</td>
+    					<td><span wicket:id="extract"></span></td>
+    				</tr>
+    				
+    				<input type="button" wicket:id="downloadButton" value="Download" />
+    			</table>
+    		</td>
+    	</tr>
+    </table>
+</wicket:extend>
+</body>
+</html>

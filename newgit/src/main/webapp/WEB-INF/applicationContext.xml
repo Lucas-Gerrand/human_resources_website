@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+  xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:mvc="http://www.springframework.org/schema/mvc"
+  xmlns:context="http://www.springframework.org/schema/context"
+  xmlns:util="http://www.springframework.org/schema/util"
+  xmlns:tx="http://www.springframework.org/schema/tx"
+  xmlns:ehcache="http://ehcache-spring-annotations.googlecode.com/svn/schema/ehcache-spring"
+  xsi:schemaLocation="
+          http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+          http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+          http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+          http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
+          http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+          http://ehcache-spring-annotations.googlecode.com/svn/schema/ehcache-spring http://ehcache-spring-annotations.googlecode.com/svn/schema/ehcache-spring/ehcache-spring-1.1.xsd">
+
+
+  <context:annotation-config/>
+  <context:component-scan base-package="hrrss" />
+  <context:property-placeholder location="classpath:hrrss.properties" />
+
+  <bean id="abstractDataSource" abstract="true" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+    <property name="checkoutTimeout" value="60000"/>
+    <property name="unreturnedConnectionTimeout" value="60000"/>
+    <property name="idleConnectionTestPeriod" value="300"/>
+    <property name="maxIdleTime" value="900"/>
+    <property name="maxConnectionAge" value="3600"/>
+    <property name="testConnectionOnCheckin" value="true"/>
+    <property name="propertyCycle" value="60"/>
+  </bean>
+
+  <bean id="remoteServerDataSource" parent="abstractDataSource" destroy-method="close">
+    <property name="driverClass" value="${remoteServerDataSource.driver}"/>
+    <property name="jdbcUrl" value="${remoteServerDataSource.url}"/>
+    <property name="user" value="${remoteServerDataSource.username}"/>
+    <property name="password" value="${remoteServerDataSource.password}"/>
+    <property name="description" value="RemoteServer"/>
+    <property name="initialPoolSize" value="${remoteServerDataSource.initialPoolSize}"/>
+    <property name="minPoolSize" value="${remoteServerDataSource.minPoolSize}"/>
+    <property name="maxPoolSize" value="${remoteServerDataSource.maxPoolSize}"/>
+    <property name="preferredTestQuery" value="select 1 from dual"/>
+    
+  </bean>
+    
+  <tx:annotation-driven transaction-manager="transactionManager"/> 
+  
+  <bean id="transactionManagerHrrss" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+      <property name="sessionFactory" ref="remoteServerSessionFactory"/>
+      <qualifier value="hrrssTransactionManager"/>
+  </bean> 
+  
+
+  <bean id="remoteServerSessionFactory" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+    <property name="dataSource" ref="remoteServerDataSource" />
+    <property name="packagesToScan">
+      <list>
+        <value>hrrss.model.impl</value>
+      </list>
+    </property>
+    <property name="hibernateProperties">
+      <value>
+        hibernate.dialect=${remoteServer.hibernate.dialect}
+        hibernate.hbm2ddl.auto=${remoteServer.hbm2ddl.auto}
+        hibernate.show_sql=${remoteServer.show_sql}
+        hibernate.format_sql=${remoteServer.format_sql}
+        hibernate.use_sql_comments=${remoteServer.use_sql_comments}
+        hibernate.max_fetch_depth=${remoteServer.max_fetch_depthl}
+        hibernate.default_batch_fetch_size=${remoteServer.default_batch_fetch_size}
+        hibernate.generate_statistics=${remoteServer.generate_statistics}
+        hibernate.jdbc.batch_size=${remoteServer.jdbc_batch_size}
+        hibernate.query.substitutions=${remoteServer.query_substitutions} 
+        connection.autocommit=${remoteServer.autocommit}
+        hibernate.connection.CharSet=${remoteServer.decoding}
+        hibernate.connection.characterEncoding=${remoteServer.decoding}
+        hibernate.connection.useUnicode=${remoteServer.unicoding}
+       
+      </value>
+    </property>
+  </bean> 
+  
+  <bean id="abstractDAO" class="hrrss.dao.impl.AbstractDAO">
+  		<property name="remoteServerSessionFactory" ref="remoteServerSessionFactory"/>	
+  </bean>
+  
+  <bean id="personDAO" parent="abstractDAO" class="hrrss.dao.impl.PersonDAO" />
+  <bean id="applicantDAO" parent="abstractDAO" class="hrrss.dao.impl.ApplicantDAO" />
+  <bean id="jobDescriptionDAO" parent="abstractDAO" class="hrrss.dao.impl.JobDescriptionDAO" />
+   <bean id="questionDao" parent="abstractDAO" class="hrrss.dao.impl.QuastionDAO" />
+   <bean id="applicantAnswerDAO" parent="abstractDAO" class="hrrss.dao.impl.ApplicantAnswerDAO" />
+   <bean id="applicantToSurveyDAO" parent="abstractDAO" class="hrrss.dao.impl.ApplicantToSurveyDAO" />
+  <bean id="surveyDAO" parent="abstractDAO" class="hrrss.dao.impl.SurveyDAO" />
+  <bean id="subAnswerDAO" parent="abstractDAO" class="hrrss.dao.impl.SubAnswerDAO" />
+  <bean id="cvDAO" parent="abstractDAO" class="hrrss.dao.impl.CVDAO" />
+  <bean id="cvSkillDAO" parent="abstractDAO" class="hrrss.dao.impl.CVSkillDAO" />
+  <bean id="cvExperienceDAO" parent="abstractDAO" class="hrrss.dao.impl.CVExperienceDAO" />
+  <bean id="cvEducationDAO" parent="abstractDAO" class="hrrss.dao.impl.CVEducationDAO" />
+  <bean id="messagingDAO" parent="abstractDAO" class="hrrss.dao.impl.MessagingDAO" />
+  <bean id="replyDAO" parent="abstractDAO" class="hrrss.dao.impl.ReplyDAO" />
+  <bean id="saveDAO" parent="abstractDAO" class="hrrss.dao.impl.SavedApplicantsDAO" />
+   
+   
+  
+  <bean id="personService" class="hrrss.service.impl.PersonService">
+ 	<property name="dao" ref="personDAO" />
+  </bean>   
+  
+  <bean id="applicantService" class="hrrss.service.impl.ApplicantService">
+ 	<property name="dao" ref="applicantDAO" />
+  </bean>
+  
+  <bean id="jobDescriptionService" class="hrrss.service.impl.JobDescriptionService">
+ 	<property name="dao" ref="jobDescriptionDAO" />
+  </bean> 
+    
+ <bean id="surveyService" class="hrrss.service.impl.SurveyService">
+ 	<property name="dao" ref="surveyDAO" />
+ 	<property name="qDao" ref="questionDao" />
+ 	<property name="sDao" ref="subAnswerDAO" /> 
+ 	<property name="aDao" ref="applicantToSurveyDAO" />
+  </bean>   
+  
+  <bean id="applicantAnswerService" class="hrrss.service.impl.ApplicantAnswerService">
+  	<property name="dao" ref="applicantAnswerDAO" />
+  </bean>
+  
+  <bean id="CVService" class="hrrss.service.impl.CVService">
+ 	<property name="CVDao" ref="cvDAO" />
+ 	<property name="skillDAO" ref="cvSkillDAO" />
+ 	<property name="experienceDAO" ref="cvExperienceDAO" /> 
+ 	<property name="educationDAO" ref="cvEducationDAO" />	
+  </bean>  
+ <bean id="MessagingService" class="hrrss.service.impl.MessagingService">
+ 	<property name="MsgDAO" ref="messagingDAO" />
+  </bean> 	
+  <bean id="replyService" class="hrrss.service.impl.ReplyService">
+ 	<property name="dao" ref="replyDAO" />
+  </bean> 
+  <bean id="SavedApplicantService" class="hrrss.service.impl.SavedApplicantService">
+ 	<property name="dao" ref="saveDAO" />
+  </bean> 
+
+</beans>

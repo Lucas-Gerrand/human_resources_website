@@ -1,0 +1,49 @@
+<html>
+<head></head>
+<body>
+	<wicket:extend>
+		<h1>
+			<span wicket:id="title"></span>
+			
+		</h1>
+		
+<!-- 		<iframe width="640" height="360" src="http://www.youtube.com/embed/WwYK_nCoutQ?feature=player_detailpage" frameborder="0" allowfullscreen></iframe> -->
+		<span wicket:id="addName"></span>
+		<form wicket:id="newForm">
+			<span wicket:id="feedback"></span> <input wicket:id="survey"
+				size="61" maxlength="100" type="text" placeholder="write the name" /> 
+			<br>Add survey description </br>
+			<textarea wicket:id="text_survey" size="200" maxlength="200" rows="10" cols="62"></textarea>
+			<br> </br>
+			<td>Choose type of the new question:</td>
+
+			<table>
+				<tr>
+					<td><span wicket:id="questionType"> <input
+							wicket:id="open" type="Radio" name="question" value="open"
+							checked="checked" /> Open Question <input wicket:id="choice"
+							type="Radio" name="question" value="choice" /> Closed Question 
+							<input wicket:id="attach" type="Radio" name="question" value="attach" />
+							Attach File
+							<input wicket:id="video" type="Radio" name="question" value="video" />Video
+					</span></td>
+				</tr>
+			</table>
+
+			<td><input wicket:id="submit" type="submit" class="button_example" value="Add question" />
+				<input wicket:id="save" type="submit" class="button_example" value="Save Survey" /> <input
+				wicket:id="deleteS" type="submit" class="button_example" value="Delete Survey" /></td>
+		</form>
+		<div wicket:id="navigator"></div>
+		<div wicket:id="question">
+			<div id="big" wicket:id="name">text</div>
+			<div id="big" wicket:id="text">text</div>
+
+			<td><a wicket:id="del" href="#">delete question</a></td>
+			<div></div>
+
+		</div>
+
+	</wicket:extend>
+</body>
+</html>

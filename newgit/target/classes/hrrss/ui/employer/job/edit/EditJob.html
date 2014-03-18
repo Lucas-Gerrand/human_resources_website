@@ -1,0 +1,71 @@
+<html>
+<head></head>
+<body>
+
+<wicket:extend>
+	<h1>Add Job</h1>
+	 <table>  
+	  <tr>
+    		<td>
+    			<span wicket:id="numberHired"></span>
+    		</td>
+     </tr>		
+     <tr>		
+    		<td>
+    			<span wicket:id="average"></span>
+    		</td>
+     </tr>
+     <tr>		
+    		<td>
+    			<span wicket:id="days"></span>
+    		</td>
+    	</tr>
+    </table>	
+	
+	 <form  id="contactform" wicket:id ="editForm">
+	   <span wicket:id="feedback"></span>
+	   <table><tr><td>
+	   <input wicket:id="backToProfile" type="submit" class="button_example" value="Back to Profile"/></td></tr>
+    </table>
+    <table>
+    	<tr>
+    		<td width="150">
+    			Title 
+    		</td>
+    		<td>
+    			<input wicket:id="title" size="25" type="text" placeholder="Title"/>
+    		</td>
+    	</tr>
+    	<tr>
+    		<td>
+    			Description
+    		</td>
+    		<td>
+    		<textarea wicket:id="text" rows="10" cols="70"></textarea>
+    		</td>
+    	</tr>
+    	<tr>
+    		<td>
+    			Qualification
+    		</td>
+    		<td>
+    		<input wicket:id="qualification" size="25" type="text" placeholder="qualification"/>
+    		</td>
+    	</tr>
+    	<tr>
+    		<td>
+    			
+    		</td>
+    		<td>
+    		<input wicket:id="submit" type="submit" class="button_example" value="Save"/>
+    		<input wicket:id="backToEdit" type="submit" class="button_example" value="Back to Jobs"/>
+    		
+    		</td>
+    	</tr>
+    	
+    	                     
+    </table>
+</form>
+</wicket:extend>
+</body>
+</html>

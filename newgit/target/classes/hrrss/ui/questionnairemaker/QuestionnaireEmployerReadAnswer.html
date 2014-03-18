@@ -1,0 +1,45 @@
+<html>
+<head></head>
+<body>
+
+	<wicket:extend>
+		<h1>
+			<span wicket:id="title"></span>
+		</h1>
+		<form wicket:id="editForm">
+			<span wicket:id="feedback"></span>
+			<table>
+
+			</table>
+
+		</form>
+		<h2>Surveys</h2>
+		<div wicket:id="navigator"></div>
+		<table>
+			<tr>
+				<td width="30"></td>
+				<td width="75"><h3>Date</h3></td>
+				<td width="150"><h3>From</h3></td>
+				<td width="175"><h3>Name</h3></td>
+				<td width="200"><h3>Description</h3></td>
+				<td width="200"><h3>Comment</h3></td>
+			</tr>
+		</table>
+		<div wicket:id="surveys">
+			<table>
+				<tr>
+					<td width="30"><div id="new" wicket:id="newq"></div></td>
+					<td width="75" wicket:id="date">name</td>
+					<td width="150" wicket:id="from">text</td>
+					<td width="200"><a wicket:id="add" href="#"><span wicket:id="linktext"></span></a></td>
+					<td width="200" wicket:id="text">text</td>
+					<td width="200" wicket:id="comment">comment</td>
+					<td width="200"><a wicket:id="delete" href="#">delete</a></td>
+				</tr>
+			</table>
+		</div>
+
+
+	</wicket:extend>
+</body>
+</html>

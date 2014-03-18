@@ -1,0 +1,611 @@
+/* general formatting */
+
+body  {
+	
+      font: 100% Arial, Helvetica, Clear, sans-serif;
+	  background-image: url(../img/grey_wash_wall_@2X.png);
+	  background-repeat:repeat;
+    /*  background-color: #AAAAAA;*/
+      margin: 0; 
+      padding: 0;
+      text-align: left;
+      color: #222222;  
+	font: normal 0.9em Arial, sans-serif;
+	color: black;
+}
+
+input {
+	border:1px solid black;
+	font: normal 0.9em Arial, sans-serif;
+}
+
+textarea {
+	border:1px solid black;
+	font: normal 0.9em Arial, sans-serif;
+}
+
+h1 {
+	font-family: 'Droid Sans', sans-serif;
+	font-size: 2em;
+    margin: 0.67em 0;
+	font-weight: bold;
+	
+}
+
+h2 {
+	font-family: 'Droid Sans', sans-serif;
+	font-weight: bold;
+	color: #222222;
+}
+h3 {
+	font-family: 'Droid Sans', sans-serif;
+	font-weight: bold;
+	color: black;
+}
+
+h4 {
+	font: normal 1.4em Arial, sans-serif;
+	font-weight: bold;
+	color: black;
+}
+
+#small {
+	font: normal 0.8em Arial, sans-serif;
+	color: black;
+}
+
+#medium {
+	font: normal 0.9em Arial, sans-serif;
+	color: black;
+}
+
+#big {
+	font: normal 1.2em Arial, sans-serif;
+	color: black;
+}
+
+#new {
+	font: normal 1.2em Arial, sans-serif;
+	color: red;
+}
+
+div#container {
+	
+	width: 90%;
+	margin: 10px auto 0 auto;
+	max-width: 1200px;
+	min-width: 600px;
+	
+}
+
+div#bordercontainer {
+	background-image: url(../img/paper_fibers.png);
+	background-color: #FFFFFF;
+	border:1px solid black;
+	width: 100%;
+	float: left;
+}
+
+div#header {
+  	/*background-image: url(../img/header_fill.png);*/
+	background-repeat: repeat-x;
+	width: 100%;
+	height: 90px;
+	
+}
+
+div#header div#header_left {
+	display: block;
+	float: left;
+	height: 90px;
+	width: 400px;
+	background-image: url(../img/paper_fibersLogo.png);
+	
+	background-repeat: no-repeat;
+}
+
+div#header div#header_right {
+	display: block;
+	float: right;
+	height: 90px;
+	width: 90px;
+	background-image: url(../img/c_logo.jpg);
+	background-repeat: no-repeat;
+}
+
+div#main-area {
+	width: 100%;
+	min-height: 500px;
+	float: left;
+}
+
+ 
+div#navigation{
+background-image: url(../img/binding_light.png);font-weight: bold;
+font-size: 85%;
+width: 100%;
+border-bottom: 1px solid #BBB;
+border-top: 1px solid #BBB;
+}
+
+div#navigation ul{
+border: 1px solid #BBB;
+border-width: 1px 0; /* Show only top and bottom border for main menu container */
+padding: 0;
+margin: 0;
+overflow: hidden;
+}
+
+div#navigation ul li{
+float:left;
+display: inline;
+display:block;
+float:left;
+text-transform: uppercase;
+color: #494949;
+padding: 8px 15px 8px 9px;
+margin: 0;
+text-decoration: none;
+border-right: 1px solid #BBB; /*right border between menu items*/
+
+}
+
+div#navigation ul li a{
+display:block;
+float:left;
+text-transform: uppercase;
+color: #494949;
+padding: 8px 15px 8px 9px;
+margin: 0;
+text-decoration: none;
+border-right: 1px solid #BBB; /*right border between menu items*/
+-moz-box-shadow: inset -7px 0 10px rgba(114,114,114, 0.4); /* Add inset shadow to each menu item. First 3 values in (114,114,114, 0.4) specifies rgb values, last specifies opacity */
+-webkit-box-shadow: inset -7px 0 10px rgba(114,114,114, 0.4);
+box-shadow: inset -7px 0 10px rgba(114,114,114, 0.4);
+text-shadow: 0 -1px 1px #cfcfcf; /* CSS text shadow to give text some depth */
+-moz-transition: all 0.2s ease-in-out; /* Enable CSS transition between property changes */
+-webkit-transition: all 0.2s ease-in-out;
+-o-transition: all 0.2s ease-in-out;
+-ms-transition: all 0.2s ease-in-out;
+transition: all 0.2s ease-in-out;
+}
+
+
+div#navigation ul li a:hover{
+color: black;
+-moz-box-shadow: inset -7px 0 10px rgba(60,162,221, 0.4), inset 0 0 12px rgba(60,162,221, 0.6); /* Add 2 inset shadows to each menu item  */
+-webkit-box-shadow: inset -7px 0 10px rgba(60,162,221, 0.4), inset 0 0 12px rgba(60,162,221, 0.6);
+box-shadow: inset -7px 0 10px rgba(60,162,221, 0.4), inset 0 0 12px rgba(60,162,221, 0.6);
+}
+
+a {
+	color: #2A5DB0 ;
+	font: bold;
+	text-decoration: none;
+	font-size: 1em;
+}
+
+a:hover {
+	color: black;
+	font: bold;
+	text-decoration: underline;
+	font-size: 1em;
+}
+
+div#navigation_job_seeker {
+	width: 100%;
+	height: 2em;
+	background-color: white;
+	border-top: 1px solid #BBB;
+	border-bottom: 1px solid #BBB;
+}
+
+div#navigation_job_seeker ul {
+	height: 100%;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	float: right;
+}
+
+div#navigation_job_seeker li {
+	float: left;
+	margin: 0.3em 0 0.3em 0;
+	padding: 0 5px;
+	border-left:1px solid #BBB;;
+	color: black;
+	font: 0.8em arial,sans-serif;
+}
+
+div#navigation_job_seeker a {
+	color: #e67700;
+	font: bold;
+	text-decoration: none;
+	font-size: 1em;
+}
+
+div#navigation_job_seeker a:hover {
+	color: white;
+	font: bold;
+	text-decoration: underline;
+	font-size: 1em;
+}
+
+
+div#content {
+	padding: 1em;
+	font: 1em arial,sans-serif;
+	line-height: 1.8em;
+}
+
+div#footer {
+	padding-top: 1em;
+	padding-bottom: 1em;
+	text-align:right;
+	font: 0.8em arial,sans-serif;
+	float: right;
+}
+
+label.registerform {
+	float:left;
+	width: 10em;
+}
+
+div.login_info {
+	padding-top: 1em;
+	padding-left: 1em;
+	float: right;
+	width: 12em;
+	height: 12em;
+/* 	background-image: url(../img/binding_light.png); */
+	background-color: white;
+	font: bold 1em Arial;
+	color: #2A5DB0 ;
+	border-left: 1px solid #BBB;;
+	border-bottom:1px solid #BBB;;
+	border-radius: 0px 0px 0px 20px;
+}
+
+div.login_info f {
+	font-wieght: bold;
+	letter-spacing: 1px; 
+	margin-bottom: 0; 
+	font: normal 0.8em Arial;
+	color: white;
+	padding-left: 1em;
+} 
+
+div.login_info f:hover {
+	font-wieght: bold;
+	letter-spacing: 1px; 
+	margin-bottom: 0;
+	text-decoration: underline;
+	font: normal 0.8em Arial;
+	color: white;
+	padding-left: 1em;
+	cursor: pointer;
+} 
+
+div.info h2 {
+	font: 1.1em arial,sans-serif;
+	text-align: left;
+	margin: 0.8em 0 0.8em 0.8em;
+}
+
+div.info table {
+	text-align: left;
+	margin-left: 0.8em;
+}
+
+div.info th.label {
+	color: #ef9300;
+	font: 0.8em arial,sans-serif;
+	text-align: left;
+}
+
+div.info td.data {
+	color: #fff;
+	padding-left: 1em;
+	font: 0.8em arial,sans-serif;
+}
+
+div.field {
+	float:left;
+	text-align: center;
+	padding-left: 2em;
+	padding-right: 2em;
+	min-width: 10em;
+}
+
+.hide {
+    display: none;
+}
+
+.accessibility {
+    position: absolute !important;
+    top: -9999px !important;
+    left: -9999px !important;
+}
+
+.validation_error {
+    color: red;
+    font-size: 90%;
+}
+
+/* spielfeld styles */
+
+div#main-area {
+	/*background-image: url(../img/field_background.png);*/
+}
+
+div.player {
+	float: left;
+	margin-right: 1em;
+	margin-left: 1em;
+	margin-top: 1em;
+	width: 120px;
+	height: 120px;
+	background-color: #404448;
+	border: 2px solid #FFCC00;
+	text-align: center;
+}
+
+a#dice img {
+	border: 0;
+}
+
+div#currentPlayerName {
+	font-size: 120%;
+	color: #ffffff;
+	padding-bottom: 0.3em;
+}
+
+ol#road {
+	list-style: none;
+	padding: 0px;
+	margin: 1em 1em;
+}
+
+li#start_road {
+	background-image: url(../img/start_road.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	vertical-align:top;
+	height: 98px;
+	padding: 0;
+	margin: 0;
+}
+
+li.empty_road {
+	background-image: url(../img/empty_road.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	vertical-align:top;
+	height: 80px;
+	padding: 0;
+	margin: 0;
+}
+
+li.oil_road {
+	background-image: url(../img/oil_road.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	vertical-align:top;
+	height: 80px;
+	padding: 0;
+	margin: 0;
+}
+
+li#finish_road {
+	background-image: url(../img/finish_road.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	vertical-align: top;
+	height: 98px;
+	padding: 0;
+	margin: 0;
+}
+
+span#player1 {
+	background-image: url(../img/car1.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 90px;
+	width: 70px;
+	float: left;
+}
+
+span#player2 {
+	background-image: url(../img/car2.png);
+	background-repeat: no-repeat;
+	background-position: 0px 10px;
+	height: 90px;
+	width: 50px;
+	float: right;
+}
+
+.feedbackPanelINFO {
+	color: green;
+	font: 1em arial,sans-serif;
+	
+}
+.feedbackPanelERROR {
+	color: red;
+	font: 1em arial,sans-serif;
+}
+.pagination{
+padding: 2px;
+}
+
+.pagination ul{
+margin: 0;
+padding: 0;
+text-align: left; /*Set to "right" to right align pagination interface*/
+font-size: 16px;
+}
+
+.pagination li{
+list-style-type: none;
+display: inline;
+padding-bottom: 1px;
+}
+
+.pagination a, .pagination a:visited{
+padding: 0 5px;
+border: 1px solid #9aafe5;
+text-decoration: none; 
+color: #2e6ab1;
+}
+
+.pagination a:hover, .pagination a:active{
+border: 1px solid #2b66a5;
+color: #000;
+background-color: #98AFC7;
+}
+
+.pagination a.currentpage{
+background-color: #2e6ab1;
+color: #FFF !important;
+border-color: #2b66a5;
+font-weight: bold;
+cursor: default;
+}
+
+.pagination a.disablelink, .pagination a.disablelink:hover{
+background-color: white;
+cursor: default;
+color: #929292;
+border-color: #929292;
+font-weight: normal !important;
+}
+
+.pagination a.prevnext{
+font-weight: bold;
+}
+#contactform{
+width: 70%;
+font-size: 12px; /* Primary font size of form. Contained elements' font size are all relative to this setting */
+}
+
+
+#contactform input, #contactform textarea{
+width: 98%;
+border-radius: 5px;
+border: 1px solid gray;
+font: normal 1.3em auto; /* 24px, or 16px x 1.5 */
+padding: 0.4166666666666667em; /* 10px, or 24px x 0.4166666666666667 */
+box-shadow: 0 0 10px gray inset;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+#contactform textarea{
+resize:vertical; /* allow vertical resize of textarea */
+height: 200px;
+}
+
+
+#contactform input:focus, #contactform textarea:focus{
+box-shadow: 0 0 10px blue inset;
+}
+
+
+#contactform input[type="radio"], #contactform input[type="checkbox"]{
+padding: 0;
+width: auto;
+height: auto;
+border-radius: 0;
+}
+
+#contactform select{
+width: 80%;
+font-size: 1.5em;
+border: 2px solid #eee;
+}
+
+#contactform .formcolumn{ /* column div inside form */
+width: 49%;
+float: left;
+}
+
+#contactform .formcolumn:first-of-type{
+margin-right: 2%; /* 2% margin after first column */
+}
+
+#contactform .formcolumn label, #contactform .formcolumn fieldset{
+font: bold 0.8em Verdana; /* font size is 12.8px, or 16 x 0.8 */
+text-transform: uppercase;
+display: block;
+margin-top: 2em;
+margin-bottom: 3px;
+}
+
+#contactform fieldset{
+width: 98%;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+#contactform .formcolumn label:first-child, #contactform .formcolumn fieldset:first-child{
+margin-top: 0; /* first label or fieldset within each column should not no top margin */
+}
+
+#contactform fieldset ul{
+list-type: none;
+margin: 0;
+padding: 0;
+}
+
+#contactform fieldset ul li{
+display: inline-block;
+margin-bottom: 5px;
+margin-right: 1em;
+}
+
+
+.button_example, back {
+border:1px solid #CCCCCC !important;-webkit-box-shadow: #FEFFFF 0px 1px 1px !important;-moz-box-shadow: #FEFFFF 0px 1px 1px ; box-shadow: #FEFFFF 0px 1px 1px !important; -webkit-border-radius: 3px!important; -moz-border-radius: 3px !important ;border-radius: 3px !important;font-size:14px !important;font-family:arial, helvetica, sans-serif !important; padding: 10px 10px 10px 10px !important; text-decoration:none !important; display:inline-block !important;text-shadow: 0px 1px 0 rgba(255,255,255,1) !important;font-weight:bold !important; color: #4A4A4A !important;
+ background-color: #F7F5F6; background-image: -webkit-gradient(linear, left top, left bottom, from(#F7F5F6), to(#DDDDDD))!important;
+ background-image: -webkit-linear-gradient(top, #F7F5F6, #DDDDDD) !important;
+ background-image: -moz-linear-gradient(top, #F7F5F6, #DDDDDD) !important;
+ background-image: -ms-linear-gradient(top, #F7F5F6, #DDDDDD) !important;
+ background-image: -o-linear-gradient(top, #F7F5F6, #DDDDDD) !important;
+ background-image: linear-gradient(to bottom, #F7F5F6, #DDDDDD) !important;filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#F7F5F6, endColorstr=#DDDDDD) !important;
+}
+
+.button_example:hover {
+ border:1px solid #ADADAD !important;
+ background-color: #E0E0E0 !important; background-image: -webkit-gradient(linear, left top, left bottom, from(#E0E0E0), to(#BDBBBC))!important;
+ background-image: -webkit-linear-gradient(top, #E0E0E0, #BDBBBC)!important;
+ background-image: -moz-linear-gradient(top, #E0E0E0, #BDBBBC)!important;
+ background-image: -ms-linear-gradient(top, #E0E0E0, #BDBBBC)!important;
+ background-image: -o-linear-gradient(top, #E0E0E0, #BDBBBC)!important;
+ background-image: linear-gradient(to bottom, #E0E0E0, #BDBBBC)!important;filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#E0E0E0, endColorstr=#BDBBBC)!important;
+}
+@media screen and (max-width: 480px){ /* responsive form settings, when window width is 480px or less */
+
+	#contactform{
+	font-size: 14px; /* decrease form font size */
+	}
+
+	#contactform .formcolumn{
+	width: 100%;
+	float: none;
+	}
+	
+	#contactform .formcolumn:first-of-type{
+	margin-right: 0; /* remove right margin from first form column */
+	}
+
+	#contactform .formcolumn:nth-of-type(2){
+	padding-top: 2em; /* add padding to top of 2nd form column, so there is a gap between the 1st and 2nd column */
+	}
+
+	#contactform select{
+	width: 98%;
+	}
+
+}
+

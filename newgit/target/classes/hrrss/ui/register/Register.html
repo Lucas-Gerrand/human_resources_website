@@ -1,0 +1,55 @@
+<html>
+<head></head>
+<body>
+
+<wicket:extend>
+	<h1> <span wicket:id="title"></span></h1>
+	 <form  id="contactform" wicket:id ="registerForm">
+	  <span wicket:id="feedback"></span>
+    <table>
+    	<tr>
+    		<td>
+    			<span wicket:id="personTyp">
+    		  <input wicket:id="applicant" type="Radio" name="person" value="applicant" checked="checked"/> Applicant
+			  <input wicket:id="employer" type="Radio" name="person" value="employer"/> Employer
+     	 		</span>
+    		</td>
+    	</tr>
+    	
+    	<tr>
+    		<td>
+    			<input wicket:id="firstname" size="20" type="text" placeholder="Firstname"/><input wicket:id="lastname" size="20" type="text" placeholder="Lastname"/>
+    		</td>	
+    	</tr>
+    	<tr>
+    		<td>
+    			<span id="medium">Please enter your correct email you will get an activation link</span>
+    			<br>
+    			<input wicket:id="email" size="42" type="text" placeholder="Your email"/>
+    		</td>
+    	</tr>
+    	<tr>
+    		<td>
+    			<input wicket:id="reemail" size="42" type="text" placeholder="Reenter email"/>
+    		</td>
+    	</tr>
+    	<tr>
+    	
+    		<td>
+    			<input wicket:id="password" size="42" type="password" placeholder="Password"/>
+    		</td>
+    	</tr>
+    	
+    	<tr>
+    		<td>
+    			<input wicket:id="submit" type="submit" class="button_example"  value="Create Account"/>
+    			
+    		</td>
+    	</tr>
+    	                     
+    </table>
+</form>
+   
+</wicket:extend>
+</body>
+</html>

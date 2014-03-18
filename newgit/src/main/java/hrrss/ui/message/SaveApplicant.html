@@ -1,0 +1,29 @@
+<html>
+<head></head>
+<body>
+
+<wicket:extend>
+
+	<h1> <span wicket:id="title"></span></h1>
+	
+	
+	<div wicket:id="errorDialog">[error]</div>
+	<div wicket:id="infoDialog">[info]</div>
+		
+	<h4> <span wicket:id="question"></span></h4>
+	<div id="big">
+		<label wicket:id="addComment">comment</label> 
+	</div>
+	
+	<form wicket:id="editForm">
+	<textarea wicket:id="comment" rows="5" cols="100" maxlength="500"></textarea>
+		<br></br>	
+		<button wicket:id="warningAdd">Yes</button>
+		<button wicket:id="No">No</button>
+	</form>
+	
+	
+</wicket:extend>
+
+</body>
+</html>

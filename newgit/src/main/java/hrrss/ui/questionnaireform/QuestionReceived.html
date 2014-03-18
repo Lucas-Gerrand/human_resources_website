@@ -1,0 +1,60 @@
+<html>
+<head></head>
+<body>
+
+	<wicket:extend>
+		<h1>
+			<span wicket:id="title"></span>
+		</h1>
+		<div wicket:id="warningDialog">[delete]</div>
+		<div wicket:id="warningDialogSend">[send]</div>
+		<div wicket:id="errorDialog">[error]</div>
+		<div wicket:id="infoDialog">[info]</div>
+		<div wicket:id="infoSendDialog">[info send]</div>
+		<form wicket:id="editForm">
+
+			<div wicket:id="feedback" style="width: 360px;"></div>
+			<button class="button_example" wicket:id="warningDelete">Delete</button>
+			<button class="button_example" wicket:id="warningSend">Send Answers</button>
+			<h2>Surveys</h2>
+
+			<div class="pagination" wicket:id="navigator"></div>
+			<table>
+				<tr>
+					<td width="30"></td>
+					<td width="30"></td>
+					<td width="75"><h3>Date</h3></td>
+					<td width="250"><h3>From</h3></td>
+					<td width="200"><h3>Name</h3></td>
+					<td width="250"><h3>Description</h3></td>
+					<td width="180"><h3>Percent complete</h3></td>
+				</tr>
+			</table>
+			<span wicket:id="survey_group">
+
+				<div wicket:id="surveys">
+					<table>
+						<tr>
+							<td width="30"><div id="new" wicket:id="newq"></div></td>
+							<td width="30"><input wicket:id="choice" type="checkbox" name="choice"
+								value="choice" /></td>
+							<td width="75" wicket:id="date">name</td>
+							<td width="100" wicket:id="company">name</td>
+							<td width="150" wicket:id="from">text</td>
+							<td width="200"><a wicket:id="add" href="#"><span wicket:id="linktext"></span></a></td>
+
+							<td width="250" wicket:id="text">text</td>
+							<td width="180" wicket:id="percent">percentage</td>
+
+							
+
+
+						</tr>
+					</table>
+				</div>
+			</span>
+		</form>
+
+	</wicket:extend>
+</body>
+</html>

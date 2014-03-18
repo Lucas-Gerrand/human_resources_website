@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+    <head>
+        <title xml:lang="en">Click - Match - Hire</title>
+        <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+        <link rel="stylesheet" type="text/css" href="styles/screen.css" />
+        <link rel="stylesheet" href="styles/jquery-ui.css" />
+  		<script src="js/jquery-1.9.1.js"></script>
+  		<script src="js/jquery-ui.js"></script>
+		<script>
+			$(function() {
+				$( "#day" ).datepicker();
+			});
+			
+			$(function() {
+			    $( "#from" ).datepicker({
+			    	changeMonth: true,
+			      	changeYear: true,
+			      	yearRange: '1950:2013',
+			      	dateFormat: 'yy-mm-dd'
+			 	});
+			});
+			
+			$(function() {
+			    $( "#till" ).datepicker({
+			    	changeMonth: true,
+			      	changeYear: true,
+			      	yearRange: '1950:2013',
+			      	dateFormat: 'yy-mm-dd'
+			 	});
+			});
+			
+			$(function() {
+			    $( "#bday" ).datepicker({
+			    	changeMonth: true,
+			      	changeYear: true,
+			      	yearRange: '1900:1998',
+			      	dateFormat: 'yy-mm-dd'
+			 	});
+			});
+		</script>
+    </head>
+    <body>
+        <div id="container">
+        
+            <div id="bordercontainer">
+                <div id="header">
+					<div id="header_left"></div>
+					<div id="header_right"></div>
+                </div>
+                <div id="navigation">
+                	<div wicket:id="loginNavigation"></div>
+                	<div wicket:id="logoutNavigation"></div>
+               
+                </div>
+                <div id="main-area">
+                    <div class="login_info">
+                    
+                    	<div wicket:id="signinPanel"></div>
+                    	<div wicket:id="employerLoggedinPanel"></div>
+                    	<div wicket:id="applicantLoggedinPanel"></div>
+               
+                 	</div>
+                 	
+                    <div id="content">
+                    	<wicket:child />
+				    </div>	
+                </div>
+            </div>
+            <div id="footer">
+                <span wicket:id="footer"></span>
+            </div>
+        </div>
+
+    </body>
+</html>

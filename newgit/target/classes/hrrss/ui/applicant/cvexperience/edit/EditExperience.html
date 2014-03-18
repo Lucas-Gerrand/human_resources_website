@@ -1,0 +1,75 @@
+<html>
+<head></head>
+<body>
+
+<wicket:extend>
+	<h1>Edit Experience</h1>
+	 <form id="contactform" wicket:id ="editForm">
+	  <span wicket:id="feedback"></span>
+	   <table>
+    	<tr><td>
+	  <input wicket:id="backToCV" type="submit" class="button_example" value="Back to CV"/>
+	  </td></tr>
+	  </table>
+    <table>
+    	<tr>
+    		<td width="150">
+    			Start
+    		</td>
+    		<td>
+    			<input wicket:id="start" id="from" size="25" type="text"/>
+    		</td>
+    	</tr>
+    	<tr>
+    		<td>
+    			End
+    		</td>
+    		<td>
+    		 <input wicket:id="end" id="till" size="25" type="text"/>
+    		</td>
+    	</tr>
+    	<tr>
+    		<td>
+    			Company
+    		</td>
+    		<td>
+    		 <input wicket:id="company" size="25" type="text"/>
+    		</td>
+    	</tr>
+    	<tr>
+    		<td>
+    			Title
+    		</td>
+    		<td>
+    		 <input wicket:id="title" size="25" type="text"/>
+    		</td>
+    		
+    	</tr>
+    		<tr>
+    		<td>
+    			Description 
+    		</td>
+    		<td>
+    			​<textarea wicket:id="description" rows="10" cols="70"></textarea>
+    		</td>
+    		
+    	</tr>
+    	<tr>
+    		<td></td>
+    		<td>
+    		<input wicket:id="submit" type="submit" class="button_example" value="Save"/>
+    		<input wicket:id="backToExp" type="submit" class="button_example" value="Back to Experience Edit"/>
+    		
+    		
+    		</td>
+    	
+    	</tr>
+    	
+    	                     
+    </table>
+</form>
+   
+	
+</wicket:extend>
+</body>
+</html>

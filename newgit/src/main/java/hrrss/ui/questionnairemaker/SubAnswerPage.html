@@ -1,0 +1,23 @@
+<html>
+<head></head>
+<body>
+	<wicket:extend>
+		<h1>
+			<span wicket:id="title"></span>
+		</h1>
+		<form wicket:id="newAForm">
+		<span wicket:id="feedback"></span>
+			<tr>
+				<td>Write the new answer (max.50)</td>
+				<td><input wicket:id="quastion" size="50" maxlength="50" type="text"
+					placeholder="write an answer (max. 50)" /></td>
+			</tr>
+			<br></br>
+			<td><input wicket:id="submit" type="submit" value="Save" /></td>
+			<td><input wicket:id="cancel" type="submit" value="Cancel" /></td>
+		</form>
+
+
+	</wicket:extend>
+</body>
+</html>

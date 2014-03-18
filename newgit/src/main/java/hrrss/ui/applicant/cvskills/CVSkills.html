@@ -1,0 +1,68 @@
+<html>
+<head></head>
+<body>
+
+<wicket:extend>
+	<h1>Edit CV Skills</h1>
+	 <table>
+	 <tr>
+	 		<td><span wicket:id="back"></span></td>
+	 	</tr>
+	 	<span wicket:id="skillContent"></span>
+	 	<tr>
+	 		<td height="30"></td>
+	 	</tr>
+	 	
+	 	<tr>
+	 		<td height="30"></td>
+	 	</tr>
+     </table>
+	
+	
+	
+	<h1>Add Skills to CV</h1>
+	 <form  id="contactform" wicket:id ="editForm">
+	  <span wicket:id="feedback"></span>
+    <table>
+    	<tr>
+    		<td width="150">
+    			Skilltype
+    		</td>
+    		<td>
+    			<select wicket:id="skillType">
+    				<option wicket:id="skill1" >Computer Skills</option>
+					<option wicket:id="skill2">Driving Skills</option>
+					<option wicket:id="skill3" >Job Related Skills</option>
+					<option wicket:id="skill4" >Manager Skills</option>
+					<option wicket:id="skill5" >Other Skills</option>
+					
+				</select>
+    		</td>
+    	</tr>
+    	<tr>
+    		<td>
+    			Description
+    		</td>
+    		<td>
+    		 <input wicket:id="description" size="25" type="text"/>
+    		</td>
+    	</tr>
+    	<tr>
+    		<td></td>
+    		<td>
+    		<input wicket:id="submit" type="submit" class="button_example" value="Add"/>
+    		
+    		</td>
+    	
+    	</tr>
+    	<tr>
+	 		<td height="50"></td>
+	 	</tr>
+    	
+    	                     
+    </table>
+</form>
+   
+</wicket:extend>
+</body>
+</html>
