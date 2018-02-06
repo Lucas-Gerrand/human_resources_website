@@ -1,0 +1,14 @@
+target/
+.*.swp
+*/debuglog.txt
+.project
+.settings
+.classpath
+crawler/core/.project
+crawler/core/logs
+org.eclipse.jdt.core.prefs
+squid/
+logs/
+bin/
+docker/
+.idea/
